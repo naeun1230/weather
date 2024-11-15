@@ -1,8 +1,8 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
 import { getTodays } from '../api/weatherApi'
 
-export const fetchTodays = createAsyncThunk('todays/fetchTodays', async (type) => {
-   const response = await getTodays(type)
+export const fetchTodays = createAsyncThunk('todays/fetchTodays', async (q) => {
+   const response = await getTodays(q)
    return response.data
 })
 

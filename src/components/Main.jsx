@@ -34,7 +34,7 @@ function Main() {
                   <hr />
                   <div>
                      {todays.map((today) => (
-                        <img src={`https://openweathermap.org/img/wn/${today.icon}@4x.png`} alt="날씨 아이콘" />
+                        <img src={`https://openweathermap.org/img/wn/${todays.weather[0].icon}@4x.png`} alt="날씨 아이콘" />
                      ))}
                   </div>
                </DemoPaper>

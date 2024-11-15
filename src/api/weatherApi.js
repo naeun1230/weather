@@ -20,13 +20,9 @@ const fetchFromApi = async (url, params = {}) => {
    }
 }
 
-export const getTodays = (type) => {
-   const endpoint = {
-      today: '/weather/today',
-   }[type]
-
-   return fetchFromApi(endpoint, {
-      q: 'incheon',
+export const getTodays = (q = 'incheon') => {
+   return fetchFromApi(`/weather`, {
+      q,
       appid: AUTH_KEY,
       units: 'metric',
       lang: 'kr',
