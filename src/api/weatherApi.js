@@ -20,8 +20,8 @@ const fetchFromApi = async (url, params = {}) => {
    }
 }
 
-export const getTodays = (q = 'incheon') => {
-   return fetchFromApi(`/weather`, {
+export const getWeathers = (q = 'incheon') => {
+   return fetchFromApi('/weather', {
       q,
       appid: AUTH_KEY,
       units: 'metric',

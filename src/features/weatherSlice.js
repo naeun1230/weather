@@ -1,30 +1,30 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
-import { getTodays } from '../api/weatherApi'
+import { getWeathers } from '../api/weatherApi'
 
-export const fetchTodays = createAsyncThunk('todays/fetchTodays', async (q) => {
-   const response = await getTodays(q)
+export const fetchWeathers = createAsyncThunk('weather/fetchWeathers', async (q) => {
+   const response = await getWeathers(q)
    return response.data
 })
 
 const weatherSlice = createSlice({
-   name: 'todays',
+   name: 'weathers',
    initialState: {
       loading: false,
-      todays: [],
+      weathers: null,
       error: null,
    },
    reducers: {},
    extraReducers: (builder) => {
       builder
-         .addCase(fetchTodays.pending, (state) => {
+         .addCase(fetchWeathers.pending, (state) => {
             state.loading = true
             state.error = null
          })
-         .addCase(fetchTodays.fulfilled, (state, action) => {
+         .addCase(fetchWeathers.fulfilled, (state, action) => {
             state.loading = false
-            state.todays = action.payload
+            state.weathers = action.payload
          })
-         .addCase(fetchTodays.rejected, (state, action) => {
+         .addCase(fetchWeathers.rejected, (state, action) => {
             state.loading = false
             state.error = action.error.message
          })

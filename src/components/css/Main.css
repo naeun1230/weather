@@ -10,3 +10,22 @@ main {
    margin: 0 auto;
    position: absolute;
 }
+
+.maintext {
+   font-size: large;
+   font-weight: bold;
+   margin: 0;
+}
+
+.icon {
+   float: left;
+   margin-top: 10px;
+}
+
+.icontext {
+   display: block;
+   text-align: center;
+   font-size: 40px;
+   font-weight: 500;
+   margin-top: 60px;
+}
