@@ -20,6 +20,7 @@ main {
 .icon {
    float: left;
    margin-top: 10px;
+   padding-left: 20px;
 }
 
 .icontext {
@@ -28,4 +29,37 @@ main {
    font-size: 40px;
    font-weight: 500;
    margin-top: 60px;
+}
+
+.weatherforecast {
+   font-size: 30px;
+   margin: 0;
+   height: 80px;
+   display: flex;
+   align-items: center;
+}
+
+.weatherrecommend {
+   display: flex;
+   padding-top: 20px;
+   padding-left: 20px;
+}
+
+.recommendationMessage {
+   text-align: center;
+   line-height: 150px;
+   font-size: 20px;
+   font-weight: bold;
+   padding-left: 50px;
+}
+
+.newsheader {
+   border-bottom: 1px dotted black;
+}
+
+.newstext {
+   font-size: 20px;
+   margin: 10px;
+   padding-bottom: 10px;
+   cursor: pointer;
 }
