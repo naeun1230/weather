@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { fetchWeathers } from '../features/weatherSlice'
+import { fetchForecasts } from '../features/forecastSlice'
 
 import './css/Main.css'
 import Stack from '@mui/material/Stack'
@@ -17,10 +17,10 @@ const DemoPaper = styled(Paper)(({ theme }) => ({
 
 function Main() {
    const dispatch = useDispatch()
-   const { weathers, loading, error } = useSelector((state) => state.weathers)
+   const { forecasts, loading, error } = useSelector((state) => state.forecasts)
 
    useEffect(() => {
-      dispatch(fetchWeathers('incheon'))
+      dispatch(fetchForecasts('incheon'))
    }, [dispatch])
 
    if (loading) return <p>Loading...</p>
@@ -35,10 +35,10 @@ function Main() {
    const dayMessage = daysOfWeek[twoDaysLater.getDay()]
 
    // weathers 가 null이면
-   if (!weathers) {
+   if (!forecasts) {
       return
    } else {
-      const temperature = weathers.main.temp
+      const temperature = forecasts.list[0].main.temp
       var weatherImage = ''
       var recommendationMessage = ''
 
@@ -74,24 +74,24 @@ function Main() {
          <div className="card">
             <Stack direction="row" spacing={2} style={{ marginTop: 30, marginLeft: 220 }}>
                <NavLink to="/today" style={{ textDecoration: 'none' }}>
-                  {weathers && (
+                  {forecasts && (
                      <DemoPaper square={false}>
                         <p className="maintext" style={{ margin: 0, padding: 0 }}>
                            오늘의 날씨
                         </p>
                         <div className="icon">
-                           <img src={`https://openweathermap.org/img/wn/${weathers.weather[0].icon}@4x.png`} alt="날씨 아이콘" />
+                           <img src={`https://openweathermap.org/img/wn/${forecasts.list[0].weather[0].icon}@4x.png`} alt="날씨 아이콘" />
                         </div>
                         <div className="icontext">
-                           {weathers.main.temp}°C
+                           {forecasts.list[0].main.temp}°C
                            <br />
-                           {weathers.weather[0].description}
+                           {forecasts.list[0].weather[0].description}
                         </div>
                      </DemoPaper>
                   )}
                </NavLink>
                <NavLink to="/weather" style={{ textDecoration: 'none' }}>
-                  {weathers && (
+                  {forecasts && (
                      <DemoPaper square={false}>
                         <p className="maintext" style={{ margin: 0 }}>
                            일기 예보
@@ -104,8 +104,8 @@ function Main() {
                                     {date.getMonth() + 1}.{date.getDate()}
                                  </p>
                               </div>
-                              <img src={`https://openweathermap.org/img/wn/${weathers.weather[0].icon}.png`} alt="날씨 아이콘" style={{ margin: '0px 20px' }} />
-                              {weathers.main.temp}°C / {weathers.weather[0].description}
+                              <img src={`https://openweathermap.org/img/wn/${forecasts.list[0].weather[0].icon}.png`} alt="날씨 아이콘" style={{ margin: '0px 20px' }} />
+                              {forecasts.list[0].main.temp}°C / {forecasts.list[0].weather[0].description}
                            </div>
 
                            <div className="weatherforecast">
@@ -115,8 +115,8 @@ function Main() {
                                     {date.getMonth() + 1}.{date.getDate() + 1}
                                  </p>
                               </div>
-                              <img src={`https://openweathermap.org/img/wn/${weathers.weather[0].icon}.png`} alt="날씨 아이콘" style={{ margin: '0px 20px' }} />
-                              {weathers.main.temp}°C / {weathers.weather[0].description}
+                              <img src={`https://openweathermap.org/img/wn/${forecasts.list[1].weather[0].icon}.png`} alt="날씨 아이콘" style={{ margin: '0px 20px' }} />
+                              {forecasts.list[1].main.temp}°C / {forecasts.list[1].weather[0].description}
                            </div>
                            <div className="weatherforecast">
                               <p className="weatherforecastdate">
@@ -125,8 +125,8 @@ function Main() {
                                     {date.getMonth() + 1}.{date.getDate() + 2}
                                  </p>
                               </p>
-                              <img src={`https://openweathermap.org/img/wn/${weathers.weather[0].icon}.png`} alt="날씨 아이콘" style={{ margin: '0px 20px' }} />
-                              {weathers.main.temp}°C / {weathers.weather[0].description}
+                              <img src={`https://openweathermap.org/img/wn/${forecasts.list[2].weather[0].icon}.png`} alt="날씨 아이콘" style={{ margin: '0px 20px' }} />
+                              {forecasts.list[2].main.temp}°C / {forecasts.list[2].weather[0].description}
                            </div>
                         </div>
                      </DemoPaper>
