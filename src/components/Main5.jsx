@@ -14,7 +14,7 @@ function Main5() {
                </p>
                <p className="newslist">
                   <Link to="https://fmc.forest.go.kr/fmc/showTwbbsContDetail.do?bbrssId=BBRSS_0008&stype=SearchAll&twbbsNo=307" style={{ textDecoration: 'none', color: 'black' }}>
-                     2024년 벚꽃 개화 예상 시기
+                     2024년 봄꽃 개화 예상 시기
                   </Link>
                </p>
                <p className="newslist">

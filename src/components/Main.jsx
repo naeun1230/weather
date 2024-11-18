@@ -151,10 +151,10 @@ function Main() {
                         WHAT'S NEW
                      </p>
                      <p className="newsheader newstext">2024년 단풍 개화 예상 시기</p>
-                     <p className="newsheader newstext">2024년 벚꽃 개화 예상 시기</p>
                      <p className="newsheader newstext">2024년 봄꽃 개화 예상 시기</p>
                      <p className="newsheader newstext">2023년 단풍 개화 예상 시기</p>
-                     <p className="newstext">2023년 벚꽃 개화 예상 시기</p>
+                     <p className="newsheader newstext">2023년 봄꽃 개화 예상 시기</p>
+                     <p className="newstext">2022년 단풍 개화 예상 시기</p>
                   </DemoPaper>
                </NavLink>
             </Stack>
