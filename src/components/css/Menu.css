@@ -26,3 +26,7 @@ li a {
    padding: 0 20px;
    margin: 0 auto;
 }
+
+.active {
+   color: #000fb9;
+}

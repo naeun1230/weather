@@ -29,4 +29,13 @@ export const getWeathers = (q = 'incheon') => {
    })
 }
 
+export const getForecasts = (q = 'incheon') => {
+   return fetchFromApi('/forecast', {
+      q,
+      appid: AUTH_KEY,
+      units: 'metric',
+      lang: 'kr',
+   })
+}
+
 export default weatherApi
