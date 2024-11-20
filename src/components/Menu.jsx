@@ -4,10 +4,10 @@ import { NavLink } from 'react-router-dom'
 function Menu() {
    return (
       <header>
-         <NavLink to="/">
-            <img src="/images/logo.png" alt="로고" width="150px" style={{ float: 'left' }} />
-         </NavLink>
          <nav>
+            <NavLink to="/">
+               <img src="/images/logo.png" alt="로고" height="60px" />
+            </NavLink>
             <ul>
                <li>
                   <NavLink to="/today">오늘 날씨</NavLink>

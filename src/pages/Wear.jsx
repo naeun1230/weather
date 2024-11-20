@@ -1,6 +1,6 @@
 import Menu from '../components/Menu'
 import Footer from '../components/Footer'
-import Main4 from '../components/Main4'
+import WearMain from '../components/WearMain'
 import { Wrap } from '../styles/StyledComponent'
 
 function Wear() {
@@ -8,7 +8,7 @@ function Wear() {
       <>
          <Menu />
          <Wrap>
-            <Main4 />
+            <WearMain />
          </Wrap>
          <Footer />
       </>

@@ -1,13 +1,13 @@
-import './css/Main2.css'
+import './css/Main.css'
 
-function Main6() {
+function NotFoundMain() {
    return (
       <main>
-         <div className="content">
+         <div className="contentwrap">
             <p className="not">잘못된 주소입니다.</p>
          </div>
       </main>
    )
 }
 
-export default Main6
+export default NotFoundMain

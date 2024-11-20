@@ -1,6 +1,6 @@
 import Menu from '../components/Menu'
 import Footer from '../components/Footer'
-import Main5 from '../components/Main5'
+import NewsMain from '../components/NewsMain'
 import { Wrap } from '../styles/StyledComponent'
 
 function News() {
@@ -8,7 +8,7 @@ function News() {
       <>
          <Menu />
          <Wrap>
-            <Main5 />
+            <NewsMain />
          </Wrap>
          <Footer />
       </>

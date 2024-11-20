@@ -1,6 +1,6 @@
 import Menu from '../components/Menu'
 import Footer from '../components/Footer'
-import Main3 from '../components/Main3'
+import WeatherMain from '../components/WeatherMain'
 import { Wrap } from '../styles/StyledComponent'
 
 function Weather() {
@@ -8,7 +8,7 @@ function Weather() {
       <>
          <Menu />
          <Wrap>
-            <Main3 />
+            <WeatherMain />
          </Wrap>
          <Footer />
       </>

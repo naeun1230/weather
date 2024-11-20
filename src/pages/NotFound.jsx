@@ -1,6 +1,6 @@
 import Menu from '../components/Menu'
 import Footer from '../components/Footer'
-import Main6 from '../components/Main6'
+import NotFoundMain from '../components/NotFoundMain'
 import { Wrap } from '../styles/StyledComponent'
 
 function NotFound() {
@@ -8,7 +8,7 @@ function NotFound() {
       <>
          <Menu />
          <Wrap>
-            <Main6 />
+            <NotFoundMain />
          </Wrap>
          <Footer />
       </>

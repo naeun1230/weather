@@ -1,6 +1,6 @@
 import Menu from '../components/Menu'
 import Footer from '../components/Footer'
-import Main2 from '../components/Main2'
+import TodayMain from '../components/TodayMain'
 import { Wrap } from '../styles/StyledComponent'
 
 function Today() {
@@ -8,7 +8,7 @@ function Today() {
       <>
          <Menu />
          <Wrap>
-            <Main2 />
+            <TodayMain />
          </Wrap>
          <Footer />
       </>

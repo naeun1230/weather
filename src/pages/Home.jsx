@@ -1,5 +1,5 @@
 import Menu from '../components/Menu'
-import Main from '../components/Main'
+import HomeMain from '../components/HomeMain'
 import Footer from '../components/Footer'
 import { Wrap } from '../styles/StyledComponent'
 
@@ -8,7 +8,7 @@ function Home() {
       <>
          <Menu />
          <Wrap>
-            <Main />
+            <HomeMain />
          </Wrap>
          <Footer />
       </>
