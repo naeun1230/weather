@@ -14,12 +14,13 @@
 }
 
 .card {
-   width: 600px;
-   height: 350px;
+   position: relative;
+   width: 550px;
+   height: 320px;
    background-color: #fff;
    border-radius: 10px;
    padding: 20px;
-   margin: 10px;
+   margin: 25px;
 }
 
 .maintext {
@@ -34,11 +35,13 @@
    display: flex;
    justify-content: center;
    align-items: center;
+   padding: 10px 30px 10px 10px;
+   height: 250px;
 }
 
 .icontext {
    text-align: center;
-   font-size: 60px;
+   font-size: 40px;
    font-weight: 500;
    width: 250px;
 }
@@ -50,7 +53,7 @@
 }
 
 .mainforecast > p {
-   margin-top: 15px;
+   margin-top: 10px;
 }
 
 .mainforecastdate {
@@ -67,11 +70,11 @@
    display: flex;
    justify-content: center;
    align-items: center;
-   height: 300px;
+   height: 280px;
 }
 
 .weatherrecommend > p {
-   font-size: 25px;
+   font-size: 22px;
    font-weight: bold;
    padding-left: 10px;
 }
@@ -106,9 +109,13 @@
 }
 
 .todaycontent {
-   font-size: 60px;
+   font-size: 47px;
    font-weight: bold;
-   padding: 100px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-top: 100px;
+   margin-right: 100px;
 }
 
 .todaytext > p {
@@ -142,6 +149,7 @@
    font-size: 50px;
    text-align: center;
    font-weight: bold;
+   margin-left: 50px;
 }
 
 .newslist {

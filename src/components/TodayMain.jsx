@@ -17,7 +17,8 @@ function TodayMain() {
    return (
       <main>
          <div className="contentwrap">
-            <p className="contentheader">오늘의 날씨</p>
+            <p className="contentheader">오늘의 인천 날씨</p>
+
             {weathers && (
                <div className="todaycontent">
                   <img src={`https://openweathermap.org/img/wn/${weathers.weather[0].icon}@4x.png`} style={{ float: 'left', margin: '0 100px' }} alt="날씨 아이콘" width="400px" />

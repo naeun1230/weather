@@ -9,7 +9,7 @@ function WeatherMain() {
    const { forecasts, loading, error } = useSelector((state) => state.forecasts)
 
    const formatDate = (dateString) => {
-      return dateString.slice(5, 10) // "11-19"
+      return dateString.slice(5, 10)
    }
 
    const getMorningData = (forecastList) => {
@@ -20,7 +20,6 @@ function WeatherMain() {
       return morningData
    }
 
-   // 데이터 로드 및 필터링
    useEffect(() => {
       dispatch(fetchForecasts('incheon'))
    }, [dispatch])
@@ -28,12 +27,7 @@ function WeatherMain() {
    if (loading) return <p>Loading...</p>
    if (error) return <p>Error: {error}</p>
 
-   // forecasts가 없거나 list가 없을 경우를 처리
-   if (!forecasts || !forecasts.list) {
-      return <p>일기 예보를 불러오는 중입니다...</p>
-   }
-
-   const morningForecasts = getMorningData(forecasts.list)
+   const morningForecasts = forecasts?.list ? getMorningData(forecasts.list) : []
 
    return (
       <main>
