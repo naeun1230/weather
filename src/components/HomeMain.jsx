@@ -12,9 +12,9 @@ function HomeMain() {
    const { forecasts, loading, error } = useSelector((state) => state.forecasts)
    const [recommendation, setRecommendation] = useState(null)
 
-   const formatDate = useCallback((dateString) => {
+   const formatDate = (dateString) => {
       return dateString.slice(5, 10)
-   }, [])
+   }
 
    const getMorningData = (forecastList) => {
       const morningData = forecastList.filter((forecast) => {
@@ -34,17 +34,20 @@ function HomeMain() {
       reset: true,
    }))
 
-   const handleMouseOver = (index) => {
-      api.start((i) => ({
-         transform: i === index ? 'scale(1.1)' : 'scale(1)',
-      }))
-   }
+   const handleMouseOver = useCallback(
+      (index) => {
+         api.start((i) => ({
+            transform: i === index ? 'scale(1.1)' : 'scale(1)',
+         }))
+      },
+      [api]
+   )
 
-   const handleMouseOut = () => {
+   const handleMouseOut = useCallback(() => {
       api.start((i) => ({
          transform: 'scale(1)',
       }))
-   }
+   }, [api])
 
    useEffect(() => {
       dispatch(fetchForecasts('incheon'))

@@ -13,7 +13,7 @@ const weatherApi = axios.create({
 const fetchFromApi = async (url, params = {}) => {
    try {
       const response = await weatherApi.get(url, { params })
-      return response
+      return response.data
    } catch (error) {
       console.error(`API요청 오류: ${error.message}`)
       throw error
